@@ -1,0 +1,132 @@
+<html>
+
+<head>
+    <title>
+        Dr. Sarah Culligan | Chiropractor - Johannesburg - South Africa
+    </title>
+    <meta name="description" content="Dr. Sarah Culligan, Chiropractor -> Centurion, Midrand, Gauteng, Johannesburg, Chiropractor Johannesburg, Chiropractor Gauteng, Chiropractor Midrand, Chiropractor Centurion, Chiropractor Sandton, Chiropractor South-Africa">
+    <meta name="keywords" content="chiropractic, back pain, gauteng chiropractor, neck pain, chiropractic treatment, dry needling, gauteng chiropractic treatment, back pain treatment, chiropractor johannesburg, chiropractor gauteng, muscle tension, sports injuries, shoulder, headaches,
+    elbow, chiropractor midrand, chiropractor centurion, chiropractor sandton, chiropractor south-africa">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @import url ('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css');
+        @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-family: Roboto;
+        }
+
+        .main {
+            height: 100%;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .content {
+            text-align: center;
+            padding-top: 5em;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            line-height: 1em;
+            font-weight: 900;
+            letter-spacing: -0.0225em;
+            margin-bottom: .25em;
+        }
+
+        h2 {
+            font-size: .75em;
+            line-height: 1.4em;
+            font-weight: 700;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+        }
+
+        p {
+            margin-top: 6em;
+            font-size: .85em;
+            line-height: 1em;
+            font-weight: 400;
+            color: #666;
+        }
+
+        .submit-button {
+            margin-top: 6em;
+            padding: 1.5em;
+            font-size: .85em;
+            font-weight: 900;
+            letter-spacing: 0.2225em;
+            color: #fff;
+            background: #45a093;
+            border: 0;
+            text-transform: uppercase;
+            border-radius: .25rem;
+            text-align: center;
+            border: .125em solid #45a093;
+        }
+
+        .submit-button:hover {
+            color: #fff;
+            background: #00dd95;
+        }
+
+        .submit-button:active {
+            color: #fff;
+            background: #45a093;
+        }
+
+        .practice-selector {
+            margin-top: 3em;
+        }
+
+        .practice {
+            margin-top: 6em;
+            font-size: 0.85em;
+            padding: 1.5em;
+            border-radius: 0;
+            /*-webkit-appearance: button;*/
+        }
+        .hide {
+          display:none;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="main">
+        <section class="content">
+            <h1>Dr. Sarah Culligan</h1>
+            <h2>M.tech Chiro (University of Johannesburg)</h2>
+
+            <script type="text/javascript">
+            function renderButton (){
+              var selectPractice = document.getElementById("select-practice");
+              var selectedPractice = selectPractice.options[selectPractice.selectedIndex].text;
+              document.getElementById("rendered-button").innerHTML =
+              ('<a href="https://www.recomed.co.za/chiropractor/'+ selectedPractice +'/sarah-culligan/" target="_blank"> <input type="submit" value="Book '+ selectedPractice +'"' +'class="submit-button"' +'>'  +'</input></a>');
+            }
+            </script>
+
+            <form name="form">
+                <div>
+                <select id="select-practice" name="practice" class="practice" onchange="renderButton()">
+                  <option selected="selected">Select practice</option>
+                  <option>centurion</option>
+                  <option>midrand</option>
+              </select>
+            </div>
+            <div id="rendered-button" >
+            </div>
+            </form>
+            <p>Website currently under construction.</p>
+        </section>
+    </section>
+
+
+
+
+</body>
+
+</html>
