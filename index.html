@@ -86,10 +86,12 @@
             font-size: 0.85em;
             padding: 1.5em;
             border-radius: 0;
+            text-transform: capitalize;
             /*-webkit-appearance: button;*/
         }
+
         .hide {
-          display:none;
+            display: none;
         }
     </style>
 </head>
@@ -101,24 +103,28 @@
             <h2>M.tech Chiro (University of Johannesburg)</h2>
 
             <script type="text/javascript">
-            function renderButton (){
-              var selectPractice = document.getElementById("select-practice");
-              var selectedPractice = selectPractice.options[selectPractice.selectedIndex].text;
-              document.getElementById("rendered-button").innerHTML =
-              ('<a href="https://www.recomed.co.za/chiropractor/'+ selectedPractice +'/sarah-culligan/" target="_blank"> <input type="submit" value="Book '+ selectedPractice +'"' +'class="submit-button"' +'>'  +'</input></a>');
-            }
+                function renderButton() {
+                    var selectPractice = document.getElementById('select-practice');
+                    var selectedPractice = selectPractice.options[selectPractice.selectedIndex].text;
+                    if (selectedPractice === 'select practice') {
+                        document.getElementById("rendered-button").innerHTML = ('');
+                    } else {
+                        document.getElementById("rendered-button").innerHTML =
+                            ('<a href="https://www.recomed.co.za/chiropractor/' + selectedPractice + '/sarah-culligan/" target="_blank"> <input type="button" value="Book ' + selectedPractice + '"' + 'class="submit-button"' + '/></a>');
+                    }
+                }
             </script>
 
             <form name="form">
                 <div>
-                <select id="select-practice" name="practice" class="practice" onchange="renderButton()">
-                  <option selected="selected">Select practice</option>
+                    <select id="select-practice" name="practice" class="practice" onchange="renderButton()">
+                  <option selected="selected">select practice</option>
                   <option>centurion</option>
                   <option>midrand</option>
               </select>
-            </div>
-            <div id="rendered-button" >
-            </div>
+                </div>
+                <div id="rendered-button">
+                </div>
             </form>
             <p>Website currently under construction.</p>
         </section>
