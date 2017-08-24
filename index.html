@@ -53,7 +53,6 @@
         }
 
         .submit-button {
-            margin-top: 6em;
             padding: 1.5em;
             font-size: .85em;
             font-weight: 900;
@@ -65,7 +64,10 @@
             border-radius: .25rem;
             text-align: center;
             border: .125em solid #45a093;
+            text-decoration: none;
         }
+
+
 
         .submit-button:hover {
             color: #fff;
@@ -75,6 +77,10 @@
         .submit-button:active {
             color: #fff;
             background: #45a093;
+        }
+
+        .submit-button-placeholder{
+          margin-top: 6em;
         }
 
         .practice-selector {
@@ -110,7 +116,7 @@
                         document.getElementById("rendered-button").innerHTML = ('');
                     } else {
                         document.getElementById("rendered-button").innerHTML =
-                            ('<a href="https://www.recomed.co.za/chiropractor/' + selectedPractice + '/sarah-culligan/" target="_blank"> <input type="button" value="Book ' + selectedPractice + '"' + 'class="submit-button"' + '/></a>');
+                            ('<a href="https://www.recomed.co.za/chiropractor/' + selectedPractice + '/sarah-culligan/" target="_blank" class="submit-button"> Book ' + selectedPractice + '</a>');
                     }
                 }
             </script>
@@ -123,7 +129,7 @@
                   <option>midrand</option>
               </select>
                 </div>
-                <div id="rendered-button">
+                <div id="rendered-button" class="submit-button-placeholder">
                 </div>
             </form>
             <p>Website currently under construction.</p>
